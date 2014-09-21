@@ -473,6 +473,7 @@ class Solr(object):
             except SyntaxError as err:
                 full_html = "%s" % response
 
+        full_html = force_unicode(full_html)
         full_html = full_html.replace('\n', '')
         full_html = full_html.replace('\r', '')
         full_html = full_html.replace('<br/>', '')
